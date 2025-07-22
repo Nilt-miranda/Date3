@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fce4ec;
+  text-align: center;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+button {
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff4081;
+  color: white;
+  position: relative;
+}
+#noBtn {
+  position: absolute;
+}
+select, input[type="text"] {
+  padding: 10px;
+  margin: 8px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 300px;
+}
