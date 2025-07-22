@@ -1,5 +1,5 @@
+
 const app = document.getElementById("app");
-const API_URL = "https://isagbb-tau.vercel.app";
 
 const state = {
   horario: null,

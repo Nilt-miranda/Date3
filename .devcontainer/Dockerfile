@@ -1,13 +1,18 @@
 # Create a container for a js application using node:20 and npm
 FROM node:20
 
-# Install dependencies
+# Set the working directory inside the container
 WORKDIR /app
-COPY package*.json ./
+
+# Copy only package.json and package-lock.json for npm install layer
+COPY ../package*.json ./
+
+# Install dependencies
 RUN npm install
-# Copy the rest of the application code
-COPY . .
-# Expose the port the app runs on
-EXPOSE 3000
-# Start the application
-CMD ["npm", "start"]
+
+# Copy the rest of the app source code
+COPY ../ .
+
+# Default command (optional, can be overridden by docker-compose)
+#CMD ["npm", "start"]
+
