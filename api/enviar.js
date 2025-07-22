@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
     const info = await transporter.sendMail({
       from: `"Convite Interativo" <${process.env.EMAIL_USER}>`,
-      to: "niltonpgvm@gmail.com",
+      to: "cleberlsdadsa@gmail.com",
       subject: `Convite: ${horario} - ${comida}`,
       text: `Horário: ${horario}\nComida: ${comida}\nMensagem:\n${mensagem}`,
     });
