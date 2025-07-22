@@ -1,0 +1,24 @@
+{
+	"name": "Date",
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "date",
+	"workspaceFolder": "/app",
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"ms-azuretools.vscode-docker",
+				"github.copilot"
+			],
+			"settings": {
+				"files.exclude": {
+					"**/__pycache__": true,
+					"**/.DS_Store": true
+				}
+			}
+		}
+	}
+}

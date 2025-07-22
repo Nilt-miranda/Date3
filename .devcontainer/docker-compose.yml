@@ -1,0 +1,13 @@
+services:
+  date:
+    container_name: date
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "3000:3000"
+    restart: on-failure
+    volumes:
+      - ..:/app
+    stdin_open: true  # Runs container in mode -i
+    tty: true         # Runs container in mode -t
